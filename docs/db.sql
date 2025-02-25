@@ -1,12 +1,9 @@
-CREATE DATABASE clinica;
-USE clinica;
+CREATE DATABASE gastos;
+USE gastos;
 
-CREATE TABLE clientes(
-    id_cliente INTEGER PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(255) NOT NULL,
-    cpf VARCHAR(255) NOT NULL,
-    nascimento VARCHAR(255) NOT NULL
+CREATE TABLE gastos(
+    gasto_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    data DATE NOT NULL,
+    valor decimal(10,2) NOT NULL,
+    descricao VARCHAR(255) NOT NULL
 );
-
-ALTER TABLE clientes CHANGE COLUMN nascimento nascimento DATE;
-DESCRIBE clientes;
